@@ -25,3 +25,17 @@ pip install -r requirements.txt
 python main.py
 ```
 3. Open your browser and go to `http://127.0.0.1:5000/`
+
+## Deployment
+This application is ready to be deployed to any platform that supports Python and Flask. Here are the general steps for deploying this application:
+
+1. **Set up a production-ready web server:** Instead of using Flask's built-in development server, use a production-ready WSGI server like Gunicorn or uWSGI.
+
+2. **Create a `Procfile`:** If you are deploying to a platform like Heroku, create a `Procfile` in the root directory of your project. The `Procfile` should contain the following line to tell the platform how to start your application:
+```
+web: gunicorn main:app
+```
+
+3. **Configure your environment variables:** If your application requires any environment variables, make sure to configure them on your deployment platform.
+
+4. **Push your code to the deployment platform:** Follow the instructions provided by your deployment platform to push your code and deploy the application.
